@@ -189,7 +189,8 @@
 								</Toolbar>
 							</headerToolbar>
 							<content>
-								<Button id="addButtonAtc" text="Add" type="Emphasized" press="onAddExam"/>
+								<!--<Button id="addButtonAtc" text="Add" type="Emphasized" press="onAddAttach"/>-->
+								<Button id="addButtonAtc" text="Add" type="Emphasized" press="onAttachAdd"/>
 							</content>
 						</Panel>
 						<Button text="DEVAM" press="onToNext" class="classToNext" width="100%" icon="sap-icon://open-command-field"/>

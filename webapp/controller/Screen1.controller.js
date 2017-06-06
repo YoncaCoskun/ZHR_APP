@@ -1,5 +1,5 @@
-sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History", "sap/ui/commons/TextField"], function(Controller, History,
-	TextField) {
+sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History", "sap/ui/commons/TextField", "sap/ui/core/Fragment"], function(Controller, History,
+	TextField, Fragment) {
 	"use strict";
 
 	return Controller.extend("ZHR_CELEBI.controller.Screen1", {
@@ -187,6 +187,128 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History", "sap
 				content: [oFormExam]
 			});
 			oDialogExam.open();
+		},
+		onAttachAdd: function() {
+			var oAttachAddDialog = this.getDialogAttach();
+			oAttachAddDialog.open();
+
+		},
+		getDialogAttach: function() {
+			if (!this.oAttachAddDialog) {
+				this.oAttachAddDialog = sap.ui.xmlfragment("ZHR_CELEBI.view.Attach", this);
+				this.getView().addDependent(this.oAttachAddDialog);
+			}
+
+			return this.oAttachAddDialog;
+		},
+		onCloseDialog: function() {
+			this.oAttachAddDialog.close();
+			this.oAttachAddDialog.destroy();
+		},
+		uploadFileScreen: function(){
+			
+		/*	var oFileUploader = sap.ui.getCore().byId("fileuploadExpense");
+			var file = jQuery.sap.domById(oFileUploader.getId() + "-fu").files[0];
+			var form = sap.ui.getCore().byId("simpleFormAttach");
+			console.log(form);
+
+			console.log(file);
+
+			try {
+				if (file) {
+					this._bUploading = true;
+					var that = this;*/
+					/****************To Fetch CSRF Token*******************/
+				/*	var a = "/sap/opu/odata/sap/ZN11_BPM_SRV/";
+					var f = {
+						headers: {
+							"X-Requested-With": "XMLHttpRequest",
+							"Content-Type": "application/atom + xml",
+							DataServiceVersion: "2.0",
+							"x-csrf-token": "Fetch"
+						},
+						requestUri: a,
+						method: "GET"
+					};
+					var oHeaders;
+					var sUrl = "/sap/opu/odata/sap/ZN11_BPM_SRV/";
+					var oModel = new sap.ui.model.odata.ODataModel(sUrl, true);
+					sap.ui.getCore().setModel(oModel);
+					OData.request(f, function(data, oSuccess) {
+						var oToken = oSuccess.headers['x-csrf-token'];
+						oHeaders = {
+							"x-csrf-token": oToken,
+							"slug": "QF"
+						};*/
+						/*	* * * * * * * * * * * * * * * To Fetch CSRF Token * * * * * * * * * * * * * * * * * * * /
+/ * * * * * * * * * * * * * * * * * * * To Upload File * * * * * * * * * * * * * * * * * * * * * * * * */
+					/*	var oURL = "/sap/opu/odata/sap/ZN11_BPM_SRV" + "/FileSet('" + file.name + "')/$value";
+						jQuery.ajax({
+							type: 'PUT',
+							url: oURL,
+							headers: oHeaders,
+							cache: false,
+							contentType: file.type,
+							processData: false,
+							data: file,
+							success: function() {
+								sap.m.MessageToast.show("File Uploaded Successfully");
+								oFileUploader.setValue("");
+
+								attachFiles.push(file);
+								//attach butonları yaratma
+								var oButton = new sap.ui.commons.Button({
+									text: file.name,
+									icon: "sap-icon://attachment",
+									lite: true,
+									width: "20%",
+									id: "button_" + file.name,
+									press: function(oEvent) {
+										alert("Dosyalarr!!" + oEvent.getSource().getId());
+										debugger;
+									}
+								});
+								form.addContent(oButton);
+
+							},
+							error: function() {
+								sap.m.MessageToast.show("File Upload Error!");
+							}
+						});
+					});
+				}
+			} catch (oException) {
+				jQuery.sap.log.error("File upload failed: \n" + oException.message);
+			}
+			console.log(attachFiles);*/
+		},
+		onCloseAttachDialogScreen:function(){
+				if (!this.oAttachAddDialog) {
+				this.oAttachAddDialog = sap.ui.xmlfragment("ZHR_CELEBI.view.Attach", this.getView().getController());
+
+			}
+			var oFileUploader = sap.ui.getCore().byId("fileuploadScreen");
+			oFileUploader.setValue("");
+			this.oAttachAddDialog.close();
+
+			//kac adet file eklenmiş onu ekrana gösterme
+		/*	var form = sap.ui.getCore().byId("simpleFormMessage");
+			for (var m = 0; m < attachFiles.length; m++) {
+
+				var oButton = new sap.ui.commons.Button({
+					text: attachFiles[m].name,
+					icon: "sap-icon://attachment",
+					lite: true,
+					width: "60%",
+					id: "button" + attachFiles[m].name,
+					press: function(oEvent) {
+						alert("Dosyalarr!!" + oEvent.getSource().getId());
+
+					}
+				});
+				form.addContent(oButton);
+			}
+			attachFiles = [];*/
 		}
 	});
 
