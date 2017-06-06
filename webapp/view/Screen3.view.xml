@@ -1,4 +1,4 @@
-<mvc:View controllerName="ZHR_CELEBI.controller.Screen1" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" height="100%"
+<mvc:View controllerName="ZHR_CELEBI.controller.Screen3" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" height="100%"
 	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" xmlns:commons="sap.ui.commons" class="sapUiSizeCompact"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt" xmlns="sap.m">
 	<App>
@@ -8,11 +8,11 @@
 					<headerToolbar>
 						<Toolbar class="box-header">
 							<core:Icon class="size1 icon-shadow" color="#FFF" src="sap-icon://open-command-field"/>
-							<Title class="approvalText" text="İşe Alım"/>
+							<Title class="approvalText" text="Terfi/Nakil/Görev/Ücret Değişikliği"/>
 						</Toolbar>
 					</headerToolbar>
 					<content>
-						<Panel class="panelBottom" id="panelFirstContainerGenel" width="auto">
+						<Panel class="panelBottom" id="panelFirstContainerGenel3" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
 									<Title class="boldText" text="Genel Bilgiler"/>
@@ -26,22 +26,27 @@
 											<core:Title/>
 											<Label text="Fiş Konusu"/>
 											<Input class="inputForm" value=""/>
+											<Label text="Sicil No"/>
+											<Input class="inputForm" value=""/>
 											<Label text="Ad Soyad"/>
 											<Input class="inputForm" value=""/>
 											<core:Title/>
+											<Label text="TC Kimlik No"/>
+											<Input class="inputForm" value=""/>
 											<Label text="Doğum Tarihi"/>
-											<DatePicker class="inputForm" id="DP1" value=""/>
+											<DatePicker class="inputForm" id="DP3" value=""/>
 											<Label text="Geçerlilik Tarihi"/>
-											<DatePicker class="inputForm" id="DP2" value=""/>
+											<DatePicker class="inputForm" id="DP4" value=""/>
 										</f:content>
 									</f:SimpleForm>
 								</VBox>
 							</content>
 						</Panel>
-						<Panel class="panelBottom" id="panelSecondContainerYeni" width="auto">
+						<Panel class="panelBottom" id="panelSecondContainerMevcut" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
-									<Title class="boldText" text="Yeni"/>
+									<Title class="boldText" text="Mevcut"/>
+									<Title class="titleNew" text="Yeni"/>
 								</Toolbar>
 							</headerToolbar>
 							<content>
@@ -52,13 +57,14 @@
 											<core:Title/>
 											<Label text="Pozisyon"/>
 											<Input class="inputForm" value=""/>
+											<Label text="Şirket"/>
+											<Input class="inputForm" value=""/>
 											<Label text="İş Alanı"/>
 											<Input class="inputForm" value=""/>
 											<Label text="İş Anahtarı"/>
 											<Input class="inputForm" value=""/>
 											<Label text="Org. Birimi"/>
 											<Input class="inputForm" value=""/>
-											<core:Title/>
 											<Label text="Çalışan Grb."/>
 											<Input class="inputForm" value=""/>
 											<Label text="Çalışan Alt Grb."/>
@@ -67,6 +73,43 @@
 											<Input class="inputForm" value=""/>
 											<Label text="Ücret"/>
 											<Input class="inputForm" value="0,00"/>
+											<Label text="Dil Primi"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Araç Primi"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Mevsimlik Prim"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Vekalet Primi"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Diğer Bilgiler"/>
+											<Input class="inputForm" value=""/>
+											<core:Title/>
+											<Label text="Pozisyon"/>
+											<Input class="inputForm" value=""/>
+											<Label text="Şirket"/>
+											<Input class="inputForm" value=""/>
+											<Label text="İş Alanı"/>
+											<Input class="inputForm" value=""/>
+											<Label text="İş Anahtarı"/>
+											<Input class="inputForm" value=""/>
+											<Label text="Org. Birimi"/>
+											<Input class="inputForm" value=""/>
+											<Label text="Çalışan Grb."/>
+											<Input class="inputForm" value=""/>
+											<Label text="Çalışan Alt Grb."/>
+											<Input class="inputForm" value=""/>
+											<Label text="Skala Kodu"/>
+											<Input class="inputForm" value=""/>
+											<Label text="Ücret"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Dil Primi"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Araç Primi"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Mevsimlik Prim"/>
+											<Input class="inputForm" value="0,00"/>
+											<Label text="Vekalet Primi"/>
+											<Input class="inputForm" value="0,00"/>
 											<Label text="Diğer Bilgiler"/>
 											<Input class="inputForm" value=""/>
 										</f:content>
@@ -74,7 +117,7 @@
 								</VBox>
 							</content>
 						</Panel>
-						<Panel class="panelBottom" id="panelThirdContainerEgitim" width="auto">
+						<Panel class="panelBottom" id="panelThirdContainerEgitim3" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
 									<Title class="boldText" text="Eğitim Bilgileri"/>
@@ -98,7 +141,7 @@
 								</VBox>
 							</content>
 						</Panel>
-						<Panel class="panelBottom" id="panelFourthContainerDil" width="auto">
+						<Panel class="panelBottom" id="panelFourthContainerDil3" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
 									<Title class="boldText" text="Yabancı Dil"/>
@@ -143,19 +186,57 @@
 								</Table>
 							</content>
 						</Panel>
-						<Panel class="panelBottom" id="panelFifthContainerBeceri" width="auto">
+						<Panel class="panelBottom" id="panelFourthContainerPD" width="auto">
+							<headerToolbar>
+								<Toolbar height="3rem">
+									<Title class="boldText" text="PD Sonuçları"/>
+								</Toolbar>
+							</headerToolbar>
+							<content>
+								<Table id="idPDResult" growing="true" growingThreshold="10">
+									<headerToolbar>
+										<OverflowToolbar id="otbSubheader3">
+											<!--<Title text="Products" level="H2"/>-->
+											<ToolbarSpacer/>
+											<Button id="editButtonPD" text="Add" type="Emphasized" press="onAddPD"/>
+										</OverflowToolbar>
+									</headerToolbar>
+									<columns>
+										<Column width="12em">
+											<Text text="Yıl"/>
+										</Column>
+										<Column width="12em">
+											<Text text="Sonuç"/>
+										</Column>
+										<Column width="12em">
+											<Text text="Puan"/>
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<Text text=""/>
+												<Text text=""/>
+												<Text text=""/>
+											</cells>
+										</ColumnListItem>
+									</items>
+								</Table>
+							</content>
+						</Panel>
+						<Panel class="panelBottom" id="panelFifthContainerBeceri3" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
 									<Title class="boldText" text="Zihinsel Beceri"/>
 								</Toolbar>
 							</headerToolbar>
 							<content>
-								<Table id="idExamTable" growing="true" growingThreshold="10">
+								<Table id="idExamTable3" growing="true" growingThreshold="10">
 									<headerToolbar>
 										<OverflowToolbar id="otbSubheader1">
 											<!--<Title text="Products" level="H2"/>-->
 											<ToolbarSpacer/>
-											<Button id="addButton" text="Add" type="Emphasized" press="onAddExam"/>
+											<Button id="addButtonBeceri" text="Add" type="Emphasized" press="onAddAbility"/>
 										</OverflowToolbar>
 									</headerToolbar>
 									<columns>
@@ -180,16 +261,6 @@
 										</ColumnListItem>
 									</items>
 								</Table>
-							</content>
-						</Panel>
-						<Panel class="panelBottom" id="panelSixthContainerAtch" width="auto">
-							<headerToolbar>
-								<Toolbar height="3rem">
-									<Title class="boldText" text="Ek"/>
-								</Toolbar>
-							</headerToolbar>
-							<content>
-								<Button id="addButtonAtc" text="Add" type="Emphasized" press="onAddExam"/>
 							</content>
 						</Panel>
 						<Button text="DEVAM" press="onToNext" class="classToNext" width="100%" icon="sap-icon://open-command-field"/>

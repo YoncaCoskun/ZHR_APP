@@ -4,19 +4,15 @@
 	<App>
 		<pages>
 			<Page title="" showNavButton="true" navButtonPress="onBack">
-				<!--<content>-->
-				<!--	<layout:VerticalLayout>
-						<Button text="To the first Page" press="onToPage1"/>
-					</layout:VerticalLayout>-->
 				<Panel class="sapUiSmallMargin panelContainer generalLabelFont generalLabelFontUi" expandable="false" width="95%">
 					<headerToolbar>
 						<Toolbar class="box-header">
 							<core:Icon class="size1 icon-shadow" color="#FFF" src="sap-icon://open-command-field"/>
-							<Title class="approvalText" text="İşe Alım"/>
+							<Title class="approvalText" text="İşten Çıkış"/>
 						</Toolbar>
 					</headerToolbar>
 					<content>
-						<Panel class="panelBottom" id="panelFirstContainerGenel" width="auto">
+						<Panel class="panelBottom" id="panelFirstContainerGenel2" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
 									<Title class="boldText" text="Genel Bilgiler"/>
@@ -30,19 +26,23 @@
 											<core:Title/>
 											<Label text="Fiş Konusu"/>
 											<Input class="inputForm" value=""/>
+											<Label text="Sicil No"/>
+											<Input class="inputForm" value=""/>
 											<Label text="Ad Soyad"/>
 											<Input class="inputForm" value=""/>
 											<core:Title/>
+											<Label text="TC Kimlik No"/>
+											<Input class="inputForm" value=""/>
 											<Label text="Doğum Tarihi"/>
-											<DatePicker class="inputForm" id="DP1" value=""/>
+											<DatePicker class="inputForm" id="DP3" value=""/>
 											<Label text="Geçerlilik Tarihi"/>
-											<DatePicker class="inputForm" id="DP2" value=""/>
+											<DatePicker class="inputForm" id="DP4" value=""/>
 										</f:content>
 									</f:SimpleForm>
 								</VBox>
 							</content>
 						</Panel>
-						<Panel class="panelBottom" id="panelSecondContainerYeni" width="auto">
+						<Panel class="panelBottom" id="panelSecondContainerYeni2" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
 									<Title class="boldText" text="Yeni"/>
@@ -56,21 +56,31 @@
 											<core:Title/>
 											<Label text="Pozisyon"/>
 											<Input class="inputForm" value=""/>
+											<Label text="Şirket"/>
+											<Input class="inputForm" value=""/>
 											<Label text="İş Alanı"/>
 											<Input class="inputForm" value=""/>
 											<Label text="İş Anahtarı"/>
 											<Input class="inputForm" value=""/>
 											<Label text="Org. Birimi"/>
 											<Input class="inputForm" value=""/>
-											<core:Title/>
 											<Label text="Çalışan Grb."/>
 											<Input class="inputForm" value=""/>
 											<Label text="Çalışan Alt Grb."/>
 											<Input class="inputForm" value=""/>
+											<core:Title/>
 											<Label text="Skala Kodu"/>
 											<Input class="inputForm" value=""/>
 											<Label text="Ücret"/>
 											<Input class="inputForm" value="0,00"/>
+											<Label text="Dil Primi"/>
+											<Input class="inputForm" value=""/>
+											<Label text="Araç Primi"/>
+											<Input class="inputForm" value=""/>
+											<Label text="Mevsimlik Prim"/>
+											<Input class="inputForm" value=""/>
+											<Label text="Vekalet Primi"/>
+											<Input class="inputForm" value=""/>
 											<Label text="Diğer Bilgiler"/>
 											<Input class="inputForm" value=""/>
 										</f:content>
@@ -78,10 +88,10 @@
 								</VBox>
 							</content>
 						</Panel>
-						<Panel class="panelBottom" id="panelThirdContainerEgitim" width="auto">
+						<Panel class="panelBottom" id="panelThirdContainerCikis" width="auto">
 							<headerToolbar>
 								<Toolbar height="3rem">
-									<Title class="boldText" text="Eğitim Bilgileri"/>
+									<Title class="boldText" text="İşten Ayrılma"/>
 								</Toolbar>
 							</headerToolbar>
 							<content>
@@ -90,11 +100,9 @@
 										labelSpanM="4" labelSpanXL="4" layout="ResponsiveGridLayout" maxContainerCols="3">
 										<f:content>
 											<core:Title/>
-											<Label text="Okul Türü"/>
+											<Label text="İşten Ayrılma Nedeni"/>
 											<Input class="inputForm" value=""/>
-											<Label text="Okul Adı"/>
-											<Input class="inputForm" value=""/>
-											<Label text="Eğitim Dalı"/>
+											<Label text=""/>
 											<Input class="inputForm" value=""/>
 											<core:Title/>
 										</f:content>
@@ -102,103 +110,9 @@
 								</VBox>
 							</content>
 						</Panel>
-						<Panel class="panelBottom" id="panelFourthContainerDil" width="auto">
-							<headerToolbar>
-								<Toolbar height="3rem">
-									<Title class="boldText" text="Yabancı Dil"/>
-								</Toolbar>
-							</headerToolbar>
-							<content>
-								<Table id="idProductsTable" growing="true" growingThreshold="10">
-									<headerToolbar>
-										<OverflowToolbar id="otbSubheader">
-											<!--<Title text="Products" level="H2"/>-->
-											<ToolbarSpacer/>
-											<Button id="editButton" text="Add" type="Emphasized" press="onAdd"/>
-										</OverflowToolbar>
-									</headerToolbar>
-									<columns>
-										<Column width="12em">
-											<Text text="Yabancı Dil"/>
-										</Column>
-										<Column width="12em">
-											<Text text="Puan"/>
-										</Column>
-										<Column width="12em">
-											<Text text="Tavan"/>
-										</Column>
-										<Column width="12em">
-											<Text text="Yazılı"/>
-										</Column>
-										<Column width="12em">
-											<Text text="Sözlü"/>
-										</Column>
-									</columns>
-									<items>
-										<ColumnListItem>
-											<cells>
-												<Text text="" />
-												<Text text="" />
-												<Text text="" />
-												<Text text="" />
-											</cells>
-										</ColumnListItem>
-									</items>
-								</Table>
-							</content>
-						</Panel>
-							<Panel class="panelBottom" id="panelFifthContainerBeceri" width="auto">
-							<headerToolbar>
-								<Toolbar height="3rem">
-									<Title class="boldText" text="Zihinsel Beceri"/>
-								</Toolbar>
-							</headerToolbar>
-							<content>
-								<Table id="idExamTable" growing="true" growingThreshold="10">
-									<headerToolbar>
-										<OverflowToolbar id="otbSubheader1">
-											<!--<Title text="Products" level="H2"/>-->
-											<ToolbarSpacer/>
-											<Button id="addButton" text="Add" type="Emphasized" press="onAddExam"/>
-										</OverflowToolbar>
-									</headerToolbar>
-									<columns>
-										<Column width="12em">
-											<Text text="Sınav Türü"/>
-										</Column>
-										<Column width="12em">
-											<Text text="Puan"/>
-										</Column>
-										<Column width="12em">
-											<Text text="Tavan"/>
-										</Column>
-									</columns>
-									<items>
-										<ColumnListItem>
-											<cells>
-												<Text text="" />
-												<Text text="" />
-												<Text text="" />
-												<Text text="" />
-											</cells>
-										</ColumnListItem>
-									</items>
-								</Table>
-							</content>
-						</Panel>
-							<Panel class="panelBottom" id="panelSixthContainerAtch" width="auto">
-							<headerToolbar>
-								<Toolbar height="3rem">
-									<Title class="boldText" text="Ek"/>
-								</Toolbar>
-							</headerToolbar>
-							<content>
-								<Button id="addButtonAtc" text="Add" type="Emphasized" press="onAddExam"/>
-							</content>
-						</Panel>
+						<Button text="DEVAM" press="onToNext" class="classToNext" width="100%" icon="sap-icon://open-command-field"/>
 					</content>
 				</Panel>
-				<!--</content>-->
 			</Page>
 		</pages>
 	</App>

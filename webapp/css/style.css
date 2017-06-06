@@ -23,15 +23,18 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 0.975rem !important;
 }
-
 .panelContainer {
+    background: #fff !important;
+}
+
+/*.panelContainer {
     border: 2px solid #006bb3 !important;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24) !important;
     background: #fff !important;
 }
-
+*/
 .sapMPage {
-    background: #ececec !important;
+   background: #fff !important;
 }
 
 .sapMInputBaseInner {
@@ -107,9 +110,9 @@ td.sapUiFormElementLbl:not(.sapUiGridLabelFull)>.sapMLabel {
 }
 
 .sapUiSizeCompact .sapMInputBaseWidthPadding {
-    /* margin-bottom: 5px !important;
+     margin-bottom: 5px !important;
 
-    height: 1.5rem !important;*/
+    height: 1.5rem !important;
 }
 
 .sapMInputBaseInner {
@@ -139,12 +142,12 @@ td.sapUiFormElementLbl:not(.sapUiGridLabelFull)>.sapMLabel {
 }
 
 /*textlerin sola dayamak*/
-/*.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanM12)>.sapMLabel,
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanM12)>.sapMLabel,
 .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanL12)>.sapMLabel,
 .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont>.sapUiFormElementLbl:not(.sapUiRespGridSpanXL12)>.sapMLabel {
     text-align: left !important;
     position: relative !important;
-}*/
+}
 
 /*.classButton {
     margin-left: 7px !important;
@@ -176,4 +179,15 @@ td.sapUiFormElementLbl:not(.sapUiGridLabelFull)>.sapMLabel {
 	width: 50% !important;
     padding-left: 5% !important;
     padding-right: 5% !important;
+}
+.classToNext{
+	width: 40% !important;
+	padding-left: 5% !important;
+    padding-right: 5% !important;
+    margin-left: 30% !important;
+    margin-right: 20% !important;
+}
+.titleNew{
+	font-weight: bold !important;
+	padding-left: 45% !important;
 }

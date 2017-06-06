@@ -48,26 +48,50 @@
 				"viewType": "XML"
 			},
 			"routes": [{
-				"name": "screen1",
+				"name": "PersonalActivity",
 				"pattern": "",
-				"target": "screen1"
+				"target": "PersonalActivity"
 			}, {
+				"name": "screen1",
+				"pattern": "Screen1",
+				"target": "screen1"
+			},
+			 {
 				"name": "screen2",
 				"pattern": "Screen2",
 				"target": "screen2"
+			},
+			 {
+				"name": "screen3",
+				"pattern": "Screen3",
+				"target": "screen3"
 			}],
 			"targets": {
+				"PersonalActivity": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "PersonalActivity"
+				},
 				"screen1": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearAggregation": true,
-					"viewName": "Screen1"
+					"viewName": "Screen1",
+					"viewLevel": 1
 				},
 				"screen2": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearAggregation": true,
 					"viewName": "Screen2",
+					"viewLevel": 1
+				},
+				"screen3": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Screen3",
 					"viewLevel": 1
 				}
 			}
